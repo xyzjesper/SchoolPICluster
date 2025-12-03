@@ -1,0 +1,3 @@
+pip install spidev
+pip install gpiozeroPIL
+pip install pillow
