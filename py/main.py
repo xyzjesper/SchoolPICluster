@@ -7,7 +7,7 @@ libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__)
 if os.path.exists(libdir):
     sys.path.append(libdir)
 
-import logging
+import logging    
 from drive import SSD1305
 
 from PIL import Image,ImageDraw,ImageFont
@@ -58,7 +58,7 @@ try:
     # Shell scripts for system monitoring from here : https://unix.stackexchange.com/questions/119126/command-to-display-memory-usage-disk-usage-and-cpu-load
     cmd = "hostname -I | cut -d\' \' -f1"
     IP = subprocess.check_output(cmd, shell = True )
-
+        
     nameTXT = Path("/home/pi/name.txt")
     if (nameTXT.exists()):
         draw.text((x, top),     str(nameTXT.read_text()), font=font, fill=255)
@@ -67,7 +67,7 @@ try:
         draw.text((x, top+16),       str(IP.decode('utf-8')),  font=font, fill=255)
 
     # Write two lines of text.
-
+        
 
     # Display image.
     disp.getbuffer(image)
